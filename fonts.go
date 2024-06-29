@@ -20,7 +20,7 @@ var fontsSimple = DefaultEmbeddedFonts.LoadFontsByNames([]string{
 
 // var fontemoji = loadFontByName("fonts/seguiemj.ttf")
 var fontsAll = append(fontsSimple, fontChinese)
-var fontChinese = DefaultEmbeddedFonts.LoadFontByName("fonts/wqy-microhei.ttc")
+var fontChinese = DefaultEmbeddedFonts.LoadFontByName("fonts/chromohv.ttf")
 
 // randFontFrom choose random font family.选择随机的字体
 func randFontFrom(fonts []*truetype.Font) *truetype.Font {
