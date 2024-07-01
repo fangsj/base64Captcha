@@ -222,7 +222,7 @@ func (item *ItemChar) drawText(text string, fonts []*truetype.Font) error {
 		c.SetFontSize(float64(fontSize))
 		c.SetFont(randFontFrom(fonts))
 		x := fontWidth*i + fontWidth/fontSize
-		y := item.height/2 + fontSize/2 - rand.Intn(item.height/16*4)
+		y := item.height/2 + fontSize/2 - rand.Intn(item.height/16*6)
 		pt := freetype.Pt(x, y)
 		if _, err := c.DrawString(string(s), pt); err != nil {
 			return err
