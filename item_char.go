@@ -217,12 +217,12 @@ func (item *ItemChar) drawText(text string, fonts []*truetype.Font) error {
 	fontWidth := item.width / len(text)
 
 	for i, s := range text {
-		fontSize := item.height * (rand.Intn(7) + 15) / 16
+		fontSize := item.height * (rand.Intn(7) + 12) / 16
 		c.SetSrc(image.NewUniform(RandDeepColor()))
 		c.SetFontSize(float64(fontSize))
 		c.SetFont(randFontFrom(fonts))
 		x := fontWidth*i + fontWidth/fontSize
-		y := item.height/2 + fontSize/2 - rand.Intn(item.height/16*3)
+		y := item.height/2 + fontSize/2 - rand.Intn(item.height/16*4)
 		pt := freetype.Pt(x, y)
 		if _, err := c.DrawString(string(s), pt); err != nil {
 			return err
